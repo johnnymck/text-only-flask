@@ -1,8 +1,8 @@
 import bs4 as bs
 import flask
+import requests
 
-from urllib.request import urlopen
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__)
 
 @app.route('/')
@@ -21,7 +21,8 @@ def view():
       return render_template("view.html", url=url)
     else :
       url = "https://" + url
-      return render_template("view.html", url=url)
+      html = requests.get(url).text
+      return render_template("view.html", html=html)
 
 if __name__ == '__main__':
   app.run()
