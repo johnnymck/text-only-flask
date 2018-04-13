@@ -1,12 +1,16 @@
 <!doctype html>
 <html>
     <head>
-
+        <title>Text-Only Viewer</title>
     </head>
     <body>
-        <h1>Ready to view a website like a person? Cool!</h1>
+        <h1>Text-Only View</h1>
+        <p>Want to see how things look for a user on a text-only browser?</p>
+        <p>Want a website to be more screen-reader parsable?</p>
+        <p>Just want a less clickbaity view of a website?</p>
+        <p><em>Fine by us!</em></p>
         <form action="/view" method="post">
-            <input type="text" name="url"/>
+            <input type="text" name="url" placeholder="url goes here..."/>
             <input type="submit" name="submit" value="view" />
         </form>
     </body>
