@@ -22,10 +22,12 @@ def view():
     else :
       url = "https://" + url
       html = requests.get(url).text
-      soup = bs.BeautifulSoup(html)
+      soup = bs.BeautifulSoup(html, 'html.parser')
       body = soup.find('body')
       all_el= body.findChildren()
-      return render_template("view.html", html=all_el[0])
+      [s.extract() for s in soup(['style', 'script', '[document]', 'head', 'title'])]
+      visible_text = soup.find_all(['h1', 'h2', 'h3', 'a','p', 'img'])
+      return render_template("view.html", html=visible_text)
 
 if __name__ == '__main__':
   app.run()
