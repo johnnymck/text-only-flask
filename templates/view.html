@@ -4,7 +4,14 @@
         <title>Text-Only View</title>
     </head>
     <body>
-        <h1>HTML:</h1>
-        <p>{{ html }}</p>
+        {% for item in html %}
+            {% if item.name == 'img' %}
+        <p>image contains: {{ item['alt'] }}</p>
+            {% elif item.name == 'a' %}
+        <a href="{{ item['href'] }}">{{ item.text }}</a>
+            {% else %}
+        <{{ item.name }}> {{item.text}} </{{item.name}}>
+            {% endif %}
+        {% endfor %}
     </body>
 </html>
