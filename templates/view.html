@@ -6,14 +6,20 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
-        {% for item in html %}
-            {% if item.name == 'img' %}
-        <p>image contains: {{ item['alt'] }}</p>
-            {% elif item.name == 'a' %}
-        <a href="{{ item['href'] }}">{{ item.text }}</a>
-            {% else %}
-        <{{ item.name }}> {{item.text}} </{{item.name}}>
-            {% endif %}
-        {% endfor %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                {% for item in html %}
+                    {% if item.name == 'img' %}
+                <p>image contains: {{ item['alt'] }}</p>
+                    {% elif item.name == 'a' %}
+                <a href="{{ item['href'] }}">{{ item.text }}</a>
+                    {% else %}
+                <{{ item.name }}> {{item.text}} </{{item.name}}>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
     </body>
 </html>

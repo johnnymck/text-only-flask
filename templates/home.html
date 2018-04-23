@@ -6,14 +6,20 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Text-Only View</h1>
-        <p>Want to see how things look for a user on a text-only browser?</p>
-        <p>Want a website to be more screen-reader parsable?</p>
-        <p>Just want a less clickbaity view of a website?</p>
-        <p><em>Fine by us!</em></p>
-        <form action="/view" method="post">
-            <input type="text" name="url" placeholder="url goes here..."/>
-            <input type="submit" name="submit" value="view" />
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="page-contents col-lg-8 col-md-8 col-sm-12">
+                <h1>Text-Only View</h1>
+                <p>Want to see how things look for a user on a text-only browser?</p>
+                <p>Want a website to be more screen-reader parsable?</p>
+                <p>Just want a less clickbaity view of a website?</p>
+                <p><em>Fine by us!</em></p>
+                <form action="/view" method="post">
+                    <input type="text" name="url" placeholder="url goes here..."/>
+                    <input type="submit" name="submit" value="view" />
+                </form>
+            </div>
+            </div>
+        </div>
     </body>
 </html>
