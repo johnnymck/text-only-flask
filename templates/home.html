@@ -3,23 +3,27 @@
     <head>
         <title>Text-Only Viewer</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script
+			  src="http://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="../static/styles/main.css"
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="page-contents col-lg-8 col-md-8 col-sm-12">
-                <h1>Text-Only View</h1>
-                <p>Want to see how things look for a user on a text-only browser?</p>
-                <p>Want a website to be more screen-reader parsable?</p>
-                <p>Just want a less clickbaity view of a website?</p>
-                <p><em>Fine by us!</em></p>
-                <form action="/view" method="post">
-                    <input type="text" name="url" placeholder="url goes here..."/>
-                    <input type="submit" name="submit" value="view" />
-                </form>
-            </div>
+            <div class="row justify-content-center">
+                <div class="page-contents col-lg-12 col-md-12 col-sm">
+                    <h1>Text-Only View</h1>
+                    <p>Want to see how things look for a user on a text-only browser?</p>
+                    <p>Want a website to be more screen-reader parsable?</p>
+                    <p>Just want a less clickbaity view of a website?</p>
+                    <p><em>Fine by us!</em></p>
+                    <form action="/view" method="post">
+                        <input type="text" name="url" placeholder="url goes here..."/>
+                        <input type="submit" name="submit" value="view" />
+                    </form>
+                </div>
             </div>
         </div>
     </body>
